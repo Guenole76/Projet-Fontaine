@@ -1,0 +1,116 @@
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  :root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: green;
+    --bg-color: green;
+    --heading-color: red;
+  }
+
+  [data-theme=dark] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+    font-size: calc(1rem + 0.25vh);
+  }
+
+  #contener {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  h1 {
+    color: var(--heading-color);
+  }
+
+  #logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    border: 1px solid yellow;
+  }
+
+  #map {
+    position: left top;
+    width: 375px;
+    height: 480px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+  }
+
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+
+  .theme-switch input {
+    display: none;
+  }
+
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+  }
+
+  input:checked + .slider {
+    background-color: blue;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
