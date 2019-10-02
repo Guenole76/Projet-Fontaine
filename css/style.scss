@@ -1,3 +1,9 @@
+
+$jaune:yellow;
+$blanc: #fff;
+$gris:#ccc;
+$bleu:#818cab;
+
 :root {
   --primary-color: #302AE6;
   --secondary-color: #536390;
@@ -6,7 +12,7 @@
   --heading-color:#00bfff;
 }
 
-[data-theme=dark] {
+[data-theme="dark"] {
   --primary-color: #9A97F3;
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
@@ -15,51 +21,67 @@
 }
 
 body {
+  
   background-color: var(--bg-color);
   color: var(--font-color);
   margin: 0;
   padding: 0;
   font-size: calc(1rem + 0.25vh);
 }
-
-#contener {
+#contener
+{
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width:100%;
+  justify-content:space-between;
 }
 
-h1 {
+h1 { 
+    
   color: var(--heading-color);
+
 }
 
 #logo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100px;
-  height: 100px;
-  border: 1px solid yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:100px; 
+    height:100px;
+    border: 1px solid $jaune;
 }
 
-#map {
-  width: 375px;
-  height: 480px;
+
+
+ #map {
+
+ 
+ width:375px;
+height:480px;
+
+
 }
 
+
+  
+ 
 nav {
   display: flex;
   justify-content: flex-end;
   padding: 20px 0;
+
+
 }
+
+
 
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
-}
-.theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
-}
 
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -68,33 +90,33 @@ nav {
 }
 
 .theme-switch input {
-  display: none;
+  display:none;
 }
 
 .slider {
-  background-color: #ccc;
+  background-color:$gris;
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transition: 0.4s;
+  transition: .4s;
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color:$blanc;
   bottom: 4px;
   content: "";
   height: 26px;
   left: 4px;
   position: absolute;
-  transition: 0.4s;
+  transition: .4s;
   width: 26px;
 }
 
 input:checked + .slider {
-  background-color: #818cab;
+  background-color:$bleu;
 }
 
 input:checked + .slider:before {
@@ -107,29 +129,58 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+
+
+
+
+
 }
 
-@media (min-width: 768px) {
-  #logo {
-    width: 20%;
-    height: 20%;
-  }
 
-  #map {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 992px) {
-  #logo {
-    width: 5%;
-    height: 5%;
-  }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
 
-  #map {
-    width: 90%;
-    height: 50%;
-  }
+#logo {
+ 
+width: 20%; 
+height:20%;
+  
 }
 
-/*# sourceMappingURL=style.css.map */
+ 
+
+#map {
+
+  
+width:100%;
+
+height:100%;
+
+ }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+
+#logo {
+ 
+  width: 5%; 
+  height:5%;
+      
+}
+    
+     
+    
+#map {
+    
+      
+  width:90%;
+    
+  height:50%;
+    
+}
+
+
+}

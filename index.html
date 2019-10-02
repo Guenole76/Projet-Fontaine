@@ -5,11 +5,34 @@
 		<title>Fontaine Paris</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="manifest" href="/dist//manifest.json">
 	</head>
 
 	<body>
-		<h1>Fontaine Potable Paris</h1>
-		<img id="logo" src="Fontaine.jpg" alt="Paris" width="100" height="100">
-		<img id="map" src="Paris.jpg" alt="Map" width="350" height="540">
-		<!--                      <p>potable ?</p>                    --> 
+		<section>
+			<div id="contener">	
+				<h1>Fontaine Potable Paris</h1>
+				<img id="logo" src="Fontaine.jpg" alt="Paris">
+			</div>
+			<img id="map" src="Paris.jpg" alt="Map">
+			<!--                      <p>potable ?</p>                    --> 
+		</section>
+		<nav>
+			<div class="theme-switch-wrapper">
+				<label class="theme-switch" for="checkbox">
+				<input type="checkbox" id="checkbox" />
+				<div class="slider round"></div>
+				</label>
+				<em>Enable Dark Mode!</em>
+			</div>			  
+		</nav>
+	<script src="script.js"></script>
+	<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+	</script>
+	</body>		
 </html>
